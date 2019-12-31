@@ -1,0 +1,87 @@
+name:                tic-tac-toe
+version:             0.1.0.0
+github:              "Github username here/tic-tac-toe"
+license:             BSD3
+author:              "Author name here"
+maintainer:          "Author email here"
+copyright:           "2019 Author name here"
+
+extra-source-files:
+- README.md
+- ChangeLog.md
+
+# Metadata used when publishing your package
+# synopsis:            Short description of your package
+# category:            App category here
+
+# To avoid duplicated efforts in documentation and dealing with the
+# complications of embedding Haddock markup inside cabal files, it is
+# common to point users to the README.md file.
+description:         Please see the README on GitHub at <https://github.com/Github username here/tic-tac-toe#readme>
+
+default-extensions:
+- NoImplicitPrelude
+- OverloadedStrings
+- TemplateHaskell
+- DataKinds
+- DeriveGeneric
+- FlexibleContexts
+- FlexibleInstances
+- MultiParamTypeClasses
+- GeneralizedNewtypeDeriving
+- TypeOperators
+- TypeFamilies
+- ConstraintKinds
+
+dependencies:
+- base >= 4.7 && < 5
+- classy-prelude
+- aeson
+- uuid
+- case-insensitive
+- bytestring
+- text
+- servant
+- servant-server
+- servant-auth
+- exceptions
+- servant-auth-server
+- servant-websockets
+- websockets
+- wai-logger
+- data-has
+- wai
+- wai-cors
+- http-types
+- warp
+- jose
+- stm
+- split
+- containers
+- time
+- mtl
+
+library:
+  source-dirs: src
+
+executables:
+  tic-tac-toe-exe:
+    main:                Main.hs
+    source-dirs:         app
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - tic-tac-toe
+
+tests:
+  tic-tac-toe-test:
+    main:                Spec.hs
+    source-dirs:         test
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - tic-tac-toe

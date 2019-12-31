@@ -1,0 +1,225 @@
+@import url("https://fonts.googleapis.com/css?family=Muli:400,800&display=swap");
+
+body {
+  font-family: "Muli", sans-serif;
+}
+
+.cell {
+  width: 100px;
+  height: 100px;
+  border: 1px solid black;
+  margin-left: -1px;
+  margin-top: -1px;
+  text-align: center;
+}
+
+.taken {
+  /* Used for marking taken cells so we don't render the hover */
+}
+
+.cell:not(.taken):hover {
+  background-color: rgba(0, 148, 255, 0.5);
+  opacity: 0.5; /* does not work */
+}
+
+.outer-row-cell {
+  height: 20px;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  margin-left: -1px;
+  margin-top: -1px;
+}
+
+.outer-column-cell {
+  height: 100px;
+  width: 20px;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  margin-left: -1px;
+  margin-top: -1px;
+}
+
+.unclickable {
+  pointer-events: none;
+}
+
+.game-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-top: -250px;
+  margin-left: -170px;
+}
+
+.next-player {
+  position: relative;
+  font-size: 18px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.players-container {
+  margin: 0 auto;
+  width: 25%;
+  text-align: center;
+  padding-top: 10em;
+}
+
+ul.players-list {
+  list-style: none;
+  padding-inline-start: 0px;
+}
+
+li.player {
+  margin-top: 10px;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid black;
+}
+
+button.invite-button {
+  margin-top: 20px;
+  background-color: #0094ff;
+  border: none;
+  color: white;
+  padding: 8px 8px;
+  margin-left: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.invite-button:hover {
+  background-color: #ff5c00;
+}
+
+.newuser-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-top: -360px;
+  margin-left: -130px;
+  text-align: center;
+}
+
+.username-prompt {
+  position: relative;
+}
+
+.username-input {
+  height: 24px;
+}
+
+.newuser-button {
+  margin-top: 20px;
+  background-color: #0094ff;
+  border: none;
+  color: white;
+  padding: 8px 8px;
+  margin-left: 4px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+}
+
+.newuser-button:hover {
+  background-color: #ff5c00;
+}
+
+.game-result {
+  position: relative;
+  font-size: 18px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.go-back-button {
+  margin-top: 20px;
+  background-color: #0094ff;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.go-back-button:hover {
+  background-color: #ff5c00;
+}
+
+.go-back-button-container {
+  display: flex;
+  justify-content: center;
+}
+
+.X {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  font-weight: 1000;
+  font-size: 72px;
+  font-style: normal;
+  color: #0094ff;
+  cursor: default;
+}
+
+.O {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  font-weight: 1000;
+  font-size: 72px;
+  font-style: normal;
+  color: #ff5c00;
+  cursor: default;
+}
+
+body td {
+  padding: 0;
+  margin: 0;
+}
+
+table {
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+.notification-container {
+  color: #000000;
+  text-align: center;
+}
+
+.accept-invitation-button {
+  background-color: #0094ff;
+  border: none;
+  color: white;
+  padding: 12px 28px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.accept-invitation-button:hover {
+  background-color: #ff5c00;
+}
+
+.decline-invitation-button {
+  background-color: #ff5c00;
+  border: none;
+  color: white;
+  padding: 12px 28px;
+  margin-left: 3px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.decline-invitation-button:hover {
+  background-color: #0094ff;
+}
