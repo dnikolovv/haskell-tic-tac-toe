@@ -18,6 +18,8 @@ In the root folder of the repository, run `stack run`.
 
 While inside the `client` folder, run `npm run start`.
 
+Note: if you encounter an error about `history` you may need to run `npm install --save history`
+
 # Contributing
 
 There are a few TODOs at the bottom of this readme. Feel free to tackle some of those or submit any improvements that you think make sense.
